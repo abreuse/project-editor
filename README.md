@@ -7,3 +7,4 @@ Manage a project list.
 
 - Display a list of hardcoded projects
 - Passing data through @Input and @Output
+- Routing with RouterModule
