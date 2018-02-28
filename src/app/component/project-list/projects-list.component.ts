@@ -17,6 +17,6 @@ export class ProjectsListComponent implements OnInit {
   }
 
   handleEventClick(data: any) {
-    console.log(data);
+    alert(data);
   }
 }

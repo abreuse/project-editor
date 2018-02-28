@@ -10,3 +10,8 @@ Manage a project list.
 - Routing with RouterModule, routerLink, navigate
 - guards against unknow routes (canActivate)
 - guards against navigation (canDeactive) - are you sure you want to exit ? -
+
+
+## Screenshot
+
+![Project editor](src/assets/project-editor.png "Project editor")

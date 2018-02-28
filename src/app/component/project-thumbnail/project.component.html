@@ -1,0 +1,13 @@
+<div class="well">
+  <div [routerLink]="['/projects', project.id]">
+    <ul>
+      <li>ID : {{project.id}}</li>
+      <li>Name : {{project.name}}</li>
+      <li>Date : {{project.date}}</li>
+      <li>Technologies : {{project.techs}}</li>
+    </ul>
+  </div>
+  <div class="center">
+    <button class="btn btn-info btn-center" (click)="sendEventToParent()">Send project name to parent component</button>
+  </div>
+</div>
