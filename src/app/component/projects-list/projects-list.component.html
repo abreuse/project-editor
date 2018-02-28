@@ -1,5 +1,8 @@
-<div>
+<div class="second-section">
   <h2>My projects</h2>
-    <app-project *ngFor="let project of projects" [project]="project"
-               (eventClick)="handleEventClick($event)"></app-project>
+  <div class="row">
+    <div *ngFor="let project of projects" class="col-md-5">
+      <app-project [project]="project" (eventClick)="handleEventClick($event)"></app-project>
+    </div>
+  </div>
 </div>

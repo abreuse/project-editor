@@ -1,7 +1,13 @@
-.block {
+.well {
   background-color: midnightblue;
   color: white;
-  margin-top: 20px;
+  padding-top: 10px;
+  padding-left: 10px;
+  padding-bottom: 10px;
+  margin-top: 10px;
   margin-bottom: 20px;
-  width: 300px;
+}
+
+.center {
+  text-align: center;
 }

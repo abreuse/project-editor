@@ -1,8 +1,10 @@
-<p>
-  {{project.name}}
-  {{project.date}}
-  {{project.techs}}
-</p>
-  <button routerLink="/projects">Back</button>
-<br>
-  <button (click)="navigateBack()">Back with code navigation</button>
+<ul>
+  <li>ID : {{project.id}}</li>
+  <li>Name : {{project.name}}</li>
+  <li>Date : {{project.date}}</li>
+  <li>Technologies : {{project.techs}}</li>
+</ul>
+<div>
+  <button class="btn btn-primary" routerLink="/projects">Back</button>
+  <button class="btn btn-primary" (click)="navigateBack()">Back with code navigation</button>
+</div>
