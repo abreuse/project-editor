@@ -1,7 +1,5 @@
 <div>
   <h2>My projects</h2>
-  <a routerLink="/projects/1">
     <app-project *ngFor="let project of projects" [project]="project"
                (eventClick)="handleEventClick($event)"></app-project>
-  </a>
 </div>

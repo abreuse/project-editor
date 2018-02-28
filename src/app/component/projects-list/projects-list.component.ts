@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {ProjectService} from '../../service/project.service';
 
 @Component({
   selector: 'app-projects-list',
@@ -9,19 +10,10 @@ export class ProjectsListComponent implements OnInit {
 
   projects = [];
 
-  project = {
-    name: 'My project',
-    date: '2018-02-25',
-    techs: ['Angular', 'Karma']
-  };
-
-  constructor() { }
+  constructor(private projectService: ProjectService) { }
 
   ngOnInit() {
-    this.projects.push(this.project);
-    this.projects.push(this.project);
-    this.projects.push(this.project);
-    this.projects.push(this.project);
+    this.projects = this.projectService.getProjects();
   }
 
   handleEventClick(data: any) {

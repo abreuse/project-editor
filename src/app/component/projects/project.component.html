@@ -1,0 +1,9 @@
+<div [routerLink]="['/projects', project.id]" class="block">
+  <p>
+    {{project.id}}
+    {{project.name}}
+    {{project.date}}
+    {{project.techs}}
+  </p>
+  <button (click)="sendEventToParent()">Send project name</button>
+</div>
