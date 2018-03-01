@@ -8,9 +8,9 @@ Manage a project list.
 - Display a list of hardcoded projects
 - Passing data through @Input and @Output
 - Routing with RouterModule, routerLink, navigate
-- guards against unknow routes (canActivate)
-- guards against navigation (canDeactive) - are you sure you want to exit ? -
-
+- Guards against unknow routes (canActivate)
+- Guards against navigation (canDeactive) - are you sure you want to exit ? -
+- Create a new project (Form validation)
 
 ## Screenshot
 

@@ -4,7 +4,7 @@
       <li>ID : {{project.id}}</li>
       <li>Name : {{project.name}}</li>
       <li>Date : {{project.date}}</li>
-      <li>Technologies : {{project.techs}}</li>
+      <li *ngIf="project.techs">Technologies : {{project.techs}}</li>
     </ul>
   </div>
   <div class="center">

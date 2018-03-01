@@ -8,6 +8,7 @@ import {Router} from '@angular/router';
   styleUrls: ['./create-project.component.css']
 })
 export class CreateProjectComponent implements OnInit {
+  mouseOverSubmit: boolean;
 
   constructor(private projectService: ProjectService,
               private router:Router) { }

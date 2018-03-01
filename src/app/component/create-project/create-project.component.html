@@ -1,21 +1,31 @@
 <h1>Create a new project</h1>
 <hr>
 <div class="col-md-4">
-  <form #projectForm="ngForm" (ngSubmit)="createProject(projectForm.value)" autocomplete="off">
+  <form #projectForm="ngForm" (ngSubmit)="createProject(projectForm.value)"
+        autocomplete="off" novalidate>
+
     <div class="form-group">
       <label for="name">Name</label>
-      <input (ngModel)="name" name="name" id="name" type="text" class="form-control" placeholder="Name...">
+      <em *ngIf="projectForm.controls.name?.invalid &&
+      (projectForm.controls.name?.touched || mouseOverSubmit)">Required</em>
+      <input autofocus required (ngModel)="name" name="name" id="name" type="text" class="form-control" placeholder="Name...">
     </div>
+
     <div class="form-group">
       <label for="date">Date</label>
-      <input (ngModel)="date" name="date" id="date" type="text" class="form-control" placeholder="Date...">
+      <em *ngIf="projectForm.controls.date?.invalid &&
+      (projectForm.controls.date?.touched || mouseOverSubmit)">Required</em>
+      <input required (ngModel)="date" name="date" id="date" type="text" class="form-control" placeholder="Date...">
     </div>
+
     <div class="form-group">
       <label for="techs">Technologies</label>
       <input (ngModel)="techs" name="techs" id="techs" type="text" class="form-control" placeholder="Techs...">
     </div>
 
-    <button type="button" (click)="cancel()" class="btn btn-default">Cancel</button>
-    <button type="submit" class="btn btn-primary">Submit</button>
+    <button type="button" (click)="cancel()" class="btn btn-warning">Cancel</button>
+    <span (mouseenter)="mouseOverSubmit=true" (mouseleave)="mouseOverSubmit=false">
+      <button [disabled]="projectForm.invalid" type="submit" class="btn btn-primary">Submit</button>
+    </span>
   </form>
 </div>
