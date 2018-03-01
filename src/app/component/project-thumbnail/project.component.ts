@@ -1,4 +1,5 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
+import {Project} from '../../model/project.model';
 
 @Component({
   selector: 'app-project',
@@ -7,7 +8,7 @@ import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 })
 export class ProjectComponent implements OnInit {
 
-  @Input() project: any;
+  @Input() project: Project;
   @Output() eventClick = new EventEmitter();
 
   sendEventToParent() {

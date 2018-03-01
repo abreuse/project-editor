@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {ActivatedRoute, Router} from '@angular/router';
 import {ProjectService} from '../../service/project.service';
+import {Project} from '../../model/project.model';
 
 @Component({
   selector: 'app-project-detail',
@@ -10,7 +11,7 @@ import {ProjectService} from '../../service/project.service';
 export class ProjectDetailComponent implements OnInit {
 
   hasToValidateBack: boolean = true;
-  project: any;
+  project: Project;
 
   constructor(private projectService: ProjectService,
               private route:ActivatedRoute,
